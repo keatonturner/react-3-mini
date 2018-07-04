@@ -80,7 +80,7 @@ class App extends Component {
   updatePrice(priceChange, id) {
     // axios (PUT)
     // setState with response -> vehiclesToDisplay
-    axios.put(baseUrl + `/vehicles/${id}/&{priceChange}`).then((res) => {
+    axios.put(baseUrl + `/vehicles/${id}/${priceChange}`).then((res) => {
       this.setState({vehiclesToDisplay: res.data.vehicles})
     })
   }
